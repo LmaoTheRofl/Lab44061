@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class Lab1 {
     public static void main(String[] args) {
        int b=1;
@@ -14,21 +12,20 @@ public class Lab1 {
         x[i] = num;
     }
     double[][] d = new double[16][18];
-    for (int i = 0; i<10; i++){
+    for (int i = 0; i<16; i++){
         for (int j = 0; j<18; j++){
-            if (c[i] == 6){
-                d[i][j] = Math.pow(((Math.pow((x[j]+1)/x[j], 2))/2), 2)*2;
+            if (c[i] == 7){
+                d[i][j] = Math.pow(Math.E, Math.atan((2/3)*((x[j]-1)/18)));
             }
-            else if (c[i]==4 | c[i]==10 | c[i]==16 | c[i]==18 | c[i]==20) {
-                d[i][j] = Math.cos(Math.sin(Math.cos(x[j])));
+            else if (c[i]==3 | c[i]==4 | c[i]==6 | c[i]==9 | c[i]==10 | c[i]==12 | c[i]==14 | c[i]==16) {
+                d[i][j] = (Math.pow(Math.atan((x[j]-1)/18), (1/3)))/2;
             }
             else {
-                d[i][j] = Math.atan(Math.cos(Math.asin(Math.pow(Math.E, Math.pow(-1*(Math.pow((5*(Math.abs(x[j])+1)), 2)), (1/3))))));
+                d[i][j] = Math.cos(Math.pow(Math.pow(((1/4)*Math.sin(x[j])), Math.cos(x[j])), (1/3)));
             }
-
         }
     }
-    for (int i = 0; i<10; i++){
+    for (int i = 0; i<16; i++){
         for (int j = 0; j<18; j++){
             System.out.printf("%.2f", d[i][j]);
             System.out.print(" ");
