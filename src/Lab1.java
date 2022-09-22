@@ -21,7 +21,7 @@ public class Lab1 {
                 d[i][j] = (Math.pow(Math.atan((x[j]-1)/18), (1/3)))/2;
             }
             else {
-                d[i][j] = Math.cos(Math.pow(Math.pow(((1/4)*Math.sin(x[j])), Math.cos(x[j])), (1/3)));
+                d[i][j] = Math.cos(Math.cbrt(Math.pow(((1/4)*Math.sin(x[j])), Math.cos(x[j]))));
             }
         }
     }
